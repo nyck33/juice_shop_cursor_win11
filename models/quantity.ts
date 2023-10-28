@@ -39,8 +39,17 @@ const QuantityModelInit = (sequelize: Sequelize) => {
         type: DataTypes.INTEGER,
         validate: {
           isInt: true
+        },
+        defaultValue: Number.MAX_SAFE_INTEGER // Set default value to maximum safe integer
+      },
+      /*
+      quantity: {
+        type: DataTypes.INTEGER,
+        validate: {
+          isInt: true
         }
       },
+      */
       limitPerUser: {
         type: DataTypes.INTEGER,
         validate: {
