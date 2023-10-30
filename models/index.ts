@@ -27,7 +27,7 @@ import { WalletModelInit } from './wallet'
 /* jslint node: true */
 
 const Sequelize = require('sequelize')
-
+/*
 const sequelize = new Sequelize('database', 'username', 'password', {
   dialect: 'sqlite',
   retry: {
@@ -39,6 +39,19 @@ const sequelize = new Sequelize('database', 'username', 'password', {
   storage: 'data/juiceshop.sqlite',
   logging: false
 })
+*/
+const sequelize = new Sequelize('database', 'PostgresUser', 'Password123!', {
+  host: 'localhost',
+  dialect: 'postgres',
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  }
+});
+
+
 AddressModelInit(sequelize)
 BasketModelInit(sequelize)
 BasketItemModelInit(sequelize)
