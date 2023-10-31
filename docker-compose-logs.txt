@@ -1,0 +1,107 @@
+Attaching to juice_shop_cursor_win11_db_1, juice_shop_cursor_win11_juiceshop_1
+[36mdb_1         |[0m The files belonging to this database system will be owned by user "postgres".
+[36mdb_1         |[0m This user must also own the server process.
+[36mdb_1         |[0m 
+[36mdb_1         |[0m The database cluster will be initialized with locale "en_US.utf8".
+[36mdb_1         |[0m The default database encoding has accordingly been set to "UTF8".
+[36mdb_1         |[0m The default text search configuration will be set to "english".
+[36mdb_1         |[0m 
+[36mdb_1         |[0m Data page checksums are disabled.
+[36mdb_1         |[0m 
+[36mdb_1         |[0m fixing permissions on existing directory /var/lib/postgresql/data ... ok
+[36mdb_1         |[0m creating subdirectories ... ok
+[36mdb_1         |[0m selecting dynamic shared memory implementation ... posix
+[36mdb_1         |[0m selecting default max_connections ... 100
+[36mdb_1         |[0m selecting default shared_buffers ... 128MB
+[36mdb_1         |[0m selecting default time zone ... Etc/UTC
+[36mdb_1         |[0m creating configuration files ... ok
+[36mdb_1         |[0m running bootstrap script ... ok
+[36mdb_1         |[0m performing post-bootstrap initialization ... ok
+[33mjuiceshop_1  |[0m info: All dependencies in ./package.json are satisfied (OK)
+[33mjuiceshop_1  |[0m info: Detected Node.js version v18.18.2 (OK)
+[33mjuiceshop_1  |[0m info: Detected OS linux (OK)
+[33mjuiceshop_1  |[0m info: Detected CPU x64 (OK)
+[33mjuiceshop_1  |[0m info: Configuration default validated (OK)
+[33mjuiceshop_1  |[0m info: Entity models 19 of 19 are initialized (OK)
+[33mjuiceshop_1  |[0m info: Required file server.js is present (OK)
+[33mjuiceshop_1  |[0m info: Required file index.html is present (OK)
+[33mjuiceshop_1  |[0m info: Required file styles.css is present (OK)
+[33mjuiceshop_1  |[0m info: Required file polyfills.js is present (OK)
+[33mjuiceshop_1  |[0m info: Required file runtime.js is present (OK)
+[33mjuiceshop_1  |[0m info: Required file main.js is present (OK)
+[33mjuiceshop_1  |[0m info: Required file vendor.js is present (OK)
+[33mjuiceshop_1  |[0m info: Port 3000 is available (OK)
+[33mjuiceshop_1  |[0m /juice-shop/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:131
+[33mjuiceshop_1  |[0m                 reject(new sequelizeErrors.ConnectionRefusedError(err));
+[33mjuiceshop_1  |[0m                        ^
+[33mjuiceshop_1  |[0m 
+[33mjuiceshop_1  |[0m ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED 172.23.0.2:5432
+[33mjuiceshop_1  |[0m     at Client._connectionCallback (/juice-shop/node_modules/sequelize/lib/dialects/postgres/connection-manager.js:131:24)
+[33mjuiceshop_1  |[0m     at Client._handleErrorWhileConnecting (/juice-shop/node_modules/pg/lib/client.js:327:19)
+[33mjuiceshop_1  |[0m     at Client._handleErrorEvent (/juice-shop/node_modules/pg/lib/client.js:337:19)
+[33mjuiceshop_1  |[0m     at Connection.emit (node:events:517:28)
+[33mjuiceshop_1  |[0m     at Socket.reportStreamError (/juice-shop/node_modules/pg/lib/connection.js:58:12)
+[33mjuiceshop_1  |[0m     at Socket.emit (node:events:517:28)
+[33mjuiceshop_1  |[0m     at emitErrorNT (node:internal/streams/destroy:151:8)
+[33mjuiceshop_1  |[0m     at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+[33mjuiceshop_1  |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+[33mjuiceshop_1  |[0m   parent: Error: connect ECONNREFUSED 172.23.0.2:5432
+[33mjuiceshop_1  |[0m       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16) {
+[33mjuiceshop_1  |[0m     errno: -111,
+[33mjuiceshop_1  |[0m     code: 'ECONNREFUSED',
+[33mjuiceshop_1  |[0m     syscall: 'connect',
+[33mjuiceshop_1  |[0m     address: '172.23.0.2',
+[33mjuiceshop_1  |[0m     port: 5432
+[33mjuiceshop_1  |[0m   },
+[33mjuiceshop_1  |[0m   original: Error: connect ECONNREFUSED 172.23.0.2:5432
+[33mjuiceshop_1  |[0m       at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16) {
+[33mjuiceshop_1  |[0m     errno: -111,
+[33mjuiceshop_1  |[0m     code: 'ECONNREFUSED',
+[33mjuiceshop_1  |[0m     syscall: 'connect',
+[33mjuiceshop_1  |[0m     address: '172.23.0.2',
+[33mjuiceshop_1  |[0m     port: 5432
+[33mjuiceshop_1  |[0m   }
+[33mjuiceshop_1  |[0m }
+[33mjuiceshop_1  |[0m 
+[33mjuiceshop_1  |[0m Node.js v18.18.2
+[36mdb_1         |[0m syncing data to disk ... ok
+[36mdb_1         |[0m 
+[36mdb_1         |[0m 
+[36mdb_1         |[0m Success. You can now start the database server using:
+[36mdb_1         |[0m 
+[36mdb_1         |[0m     pg_ctl -D /var/lib/postgresql/data -l logfile start
+[36mdb_1         |[0m 
+[36mdb_1         |[0m initdb: warning: enabling "trust" authentication for local connections
+[36mdb_1         |[0m initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+[36mdb_1         |[0m waiting for server to start....2023-10-31 11:59:59.412 UTC [48] LOG:  starting PostgreSQL 16.0 (Debian 16.0-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+[36mdb_1         |[0m 2023-10-31 11:59:59.414 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[36mdb_1         |[0m 2023-10-31 11:59:59.422 UTC [51] LOG:  database system was shut down at 2023-10-31 11:59:57 UTC
+[36mdb_1         |[0m 2023-10-31 11:59:59.428 UTC [48] LOG:  database system is ready to accept connections
+[33mjuice_shop_cursor_win11_juiceshop_1 exited with code 1
+[0m[36mdb_1         |[0m  done
+[36mdb_1         |[0m server started
+[36mdb_1         |[0m CREATE DATABASE
+[36mdb_1         |[0m 
+[36mdb_1         |[0m 
+[36mdb_1         |[0m /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+[36mdb_1         |[0m 
+[36mdb_1         |[0m waiting for server to shut down...2023-10-31 11:59:59.599 UTC [48] LOG:  received fast shutdown request
+[36mdb_1         |[0m .2023-10-31 11:59:59.601 UTC [48] LOG:  aborting any active transactions
+[36mdb_1         |[0m 2023-10-31 11:59:59.603 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+[36mdb_1         |[0m 2023-10-31 11:59:59.603 UTC [49] LOG:  shutting down
+[36mdb_1         |[0m 2023-10-31 11:59:59.605 UTC [49] LOG:  checkpoint starting: shutdown immediate
+[36mdb_1         |[0m 2023-10-31 12:00:00.047 UTC [49] LOG:  checkpoint complete: wrote 923 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.023 s, sync=0.409 s, total=0.445 s; sync files=301, longest=0.006 s, average=0.002 s; distance=4257 kB, estimate=4257 kB; lsn=0/19130C8, redo lsn=0/19130C8
+[36mdb_1         |[0m 2023-10-31 12:00:00.057 UTC [48] LOG:  database system is shut down
+[36mdb_1         |[0m  done
+[36mdb_1         |[0m server stopped
+[36mdb_1         |[0m 
+[36mdb_1         |[0m PostgreSQL init process complete; ready for start up.
+[36mdb_1         |[0m 
+[36mdb_1         |[0m 2023-10-31 12:00:00.126 UTC [1] LOG:  starting PostgreSQL 16.0 (Debian 16.0-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+[36mdb_1         |[0m 2023-10-31 12:00:00.126 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[36mdb_1         |[0m 2023-10-31 12:00:00.126 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[36mdb_1         |[0m 2023-10-31 12:00:00.130 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[36mdb_1         |[0m 2023-10-31 12:00:00.137 UTC [64] LOG:  database system was shut down at 2023-10-31 12:00:00 UTC
+[36mdb_1         |[0m 2023-10-31 12:00:00.144 UTC [1] LOG:  database system is ready to accept connections
+[36mdb_1         |[0m 2023-10-31 12:05:00.186 UTC [62] LOG:  checkpoint starting: time
+[36mdb_1         |[0m 2023-10-31 12:05:04.439 UTC [62] LOG:  checkpoint complete: wrote 45 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.221 s, sync=0.019 s, total=4.253 s; sync files=12, longest=0.004 s, average=0.002 s; distance=261 kB, estimate=261 kB; lsn=0/1954500, redo lsn=0/19544C8
