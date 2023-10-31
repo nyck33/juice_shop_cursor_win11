@@ -1,0 +1,26 @@
+Certainly! Here's a simplified Docker workflow using the PostgreSQL image as an example:
+
+1. **Pull Image**:
+   ```bash
+   docker pull postgres
+   ```
+
+2. **Run Container**:
+   ```bash
+   docker run --name some-postgres -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mypassword -d postgres
+   ```
+
+3. **Make Changes**: You can now connect to the PostgreSQL instance and make any necessary changes.
+
+4. **Commit Changes to New Image**:
+   ```bash
+   docker commit some-postgres my-postgres-image
+   ```
+
+5. **Reuse**:
+   Now you can reuse `my-postgres-image` with the new configurations:
+   ```bash
+   docker run --name new-postgres-container -d my-postgres-image
+   ```
+
+This workflow encapsulates pulling an image, running a container, making changes, committing those changes to a new image, and reusing the new image to run new containers.

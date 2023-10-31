@@ -26,7 +26,12 @@ import { WalletModelInit } from './wallet'
 
 /* jslint node: true */
 
-const Sequelize = require('sequelize')
+import {config} from 'dotenv'
+config()
+
+//const Sequelize = require('sequelize')
+import {Sequelize} from 'sequelize'
+
 /*
 const sequelize = new Sequelize('database', 'username', 'password', {
   dialect: 'sqlite',
@@ -40,8 +45,8 @@ const sequelize = new Sequelize('database', 'username', 'password', {
   logging: false
 })
 */
-const sequelize = new Sequelize('database', 'PostgresUser', 'Password123!', {
-  host: 'localhost',
+const sequelize = new Sequelize(process.env.DB_NAME || 'database', process.env.DB_USER || 'myuser', process.env.DB_PASS || 'mypassword', {
+  host: process.env.DB_HOST || 'localhost',
   dialect: 'postgres',
   pool: {
     max: 5,
