@@ -416,3 +416,13 @@ ctf:
   showFlagsInNotifications: false
   showCountryDetailsInNotifications: none # Options: none  name  flag  both
   countryMapping: ~
+
+# refer to models/index.ts
+database:
+  client: 'pg'
+  connection:
+    host: 'localhost'
+    user: 'PostgresUser'
+    password: 'Password123!'
+    database: 'database'
+    port: 5432

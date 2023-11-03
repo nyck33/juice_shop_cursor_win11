@@ -41,7 +41,7 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 })
 */
 const sequelize = new Sequelize('database', 'PostgresUser', 'Password123!', {
-  host: 'localhost',
+  host: 'localhost',  //set this to Postgres Docker container
   dialect: 'postgres',
   pool: {
     max: 5,
