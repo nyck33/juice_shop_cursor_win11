@@ -24,24 +24,13 @@ import { SecurityQuestionModelInit } from './securityQuestion'
 import { UserModelInit } from './user'
 import { WalletModelInit } from './wallet'
 
-/* jslint node: true */
+import {config} from 'dotenv'
+config()
 
-const Sequelize = require('sequelize')
-/*
-const sequelize = new Sequelize('database', 'username', 'password', {
-  dialect: 'sqlite',
-  retry: {
-    match: [/SQLITE_BUSY/],
-    name: 'query',
-    max: 5
-  },
-  transactionType: 'IMMEDIATE',
-  storage: 'data/juiceshop.sqlite',
-  logging: false
-})
-*/
-const sequelize = new Sequelize('database', 'PostgresUser', 'Password123!', {
-  host: 'localhost',  //set this to Postgres Docker container
+import {Sequelize} from 'sequelize'
+
+const sequelize = new Sequelize(process.env.DB_NAME || 'database', process.env.DB_USER || 'myuser', process.env.DB_PASS || 'mypassword', {
+  host: process.env.DB_HOST || 'localhost',
   dialect: 'postgres',
   pool: {
     max: 5,
@@ -51,27 +40,45 @@ const sequelize = new Sequelize('database', 'PostgresUser', 'Password123!', {
   }
 });
 
+const connectWithRetry = async () => {
+  return new Promise(resolve => {
+    sequelize.authenticate()
+      .then(() => {
+        console.log('Database connection has been established successfully.');
+        resolve(true);
+      })
+      .catch(err => {
+        console.error('Unable to connect to the database:', err);
+        console.log('Retrying in 5 seconds...');
+        setTimeout(connectWithRetry, 5000);
+      });
+  });
+};
 
-AddressModelInit(sequelize)
-BasketModelInit(sequelize)
-BasketItemModelInit(sequelize)
-CaptchaModelInit(sequelize)
-CardModelInit(sequelize)
-ChallengeModelInit(sequelize)
-ComplaintModelInit(sequelize)
-DeliveryModelInit(sequelize)
-FeedbackModelInit(sequelize)
-ImageCaptchaModelInit(sequelize)
-MemoryModelInit(sequelize)
-PrivacyRequestModelInit(sequelize)
-ProductModelInit(sequelize)
-QuantityModelInit(sequelize)
-RecycleModelInit(sequelize)
-SecurityAnswerModelInit(sequelize)
-SecurityQuestionModelInit(sequelize)
-UserModelInit(sequelize)
-WalletModelInit(sequelize)
+(async () => {
+  await connectWithRetry();
 
-relationsInit(sequelize)
+  AddressModelInit(sequelize)
+  BasketModelInit(sequelize)
+  BasketItemModelInit(sequelize)
+  CaptchaModelInit(sequelize)
+  CardModelInit(sequelize)
+  ChallengeModelInit(sequelize)
+  ComplaintModelInit(sequelize)
+  DeliveryModelInit(sequelize)
+  FeedbackModelInit(sequelize)
+  ImageCaptchaModelInit(sequelize)
+  MemoryModelInit(sequelize)
+  PrivacyRequestModelInit(sequelize)
+  ProductModelInit(sequelize)
+  QuantityModelInit(sequelize)
+  RecycleModelInit(sequelize)
+  SecurityAnswerModelInit(sequelize)
+  SecurityQuestionModelInit(sequelize)
+  UserModelInit(sequelize)
+  WalletModelInit(sequelize)
+
+  relationsInit(sequelize)
+})();
 
 export { sequelize }
