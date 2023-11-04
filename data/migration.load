@@ -1,0 +1,8 @@
+LOAD DATABASE
+FROM sqlite:///media/nyck33/1TB-backup/cybersec/owaspZap/juice_shop_cursor_win11/data/juiceshop.sqlite
+INTO postgresql://postgres:password123!@localhost/juiceshop_db?public
+
+WITH create tables,
+     create indexes,
+     reset sequences,
+     data only;
