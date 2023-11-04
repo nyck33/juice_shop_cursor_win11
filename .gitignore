@@ -67,3 +67,8 @@ config/*.yml
 
 #secret files
 *.env
+
+#large fles
+*.tar 
+*.sqlite
+
