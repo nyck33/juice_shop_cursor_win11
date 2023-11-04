@@ -71,4 +71,5 @@ config/*.yml
 #large fles
 *.tar 
 *.sqlite
+*zip
 
