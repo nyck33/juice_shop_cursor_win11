@@ -2,6 +2,8 @@
  * Copyright (c) 2014-2023 Bjoern Kimminich & the OWASP Juice Shop contributors.
  * SPDX-License-Identifier: MIT
  */
+console.log('Entering server.ts');
+// ... rest of the code ...
 import dataErasure from './routes/dataErasure'
 import fs = require('fs')
 import { type Request, type Response, type NextFunction } from 'express'
@@ -26,6 +28,7 @@ import path from 'path'
 import morgan from 'morgan'
 import colors from 'colors/safe'
 import * as utils from './lib/utils'
+
 
 const startTime = Date.now()
 const finale = require('finale-rest')
@@ -717,3 +720,5 @@ export function close (exitCode: number | undefined) {
 // stop server on sigint or sigterm signals
 process.on('SIGINT', () => { close(0) })
 process.on('SIGTERM', () => { close(0) })
+
+console.log('Exiting server.ts');
