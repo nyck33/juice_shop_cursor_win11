@@ -1,0 +1,4 @@
+ id | UserId | deletionRequested | createdAt | updatedAt 
+----+--------+-------------------+-----------+-----------
+(0 rows)
+

@@ -1,0 +1,9 @@
+ UserId | id |                  caption                  |                                      imagePath                                       |        createdAt        |        updatedAt        
+--------+----+-------------------------------------------+--------------------------------------------------------------------------------------+-------------------------+-------------------------
+     13 |  1 | 😼 #zatschi #whoneedsfourlegs             | assets/public/images/uploads/😼-#zatschi-#whoneedsfourlegs-1572600969477.jpg         | 2023-10-29 08:53:23.145 | 2023-10-29 08:53:23.145
+      4 |  2 | Magn(et)ificent!                          | assets/public/images/uploads/magn(et)ificent!-1571814229653.jpg                      | 2023-10-29 08:53:23.146 | 2023-10-29 08:53:23.146
+      4 |  3 | My rare collectors item! [̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]     | assets/public/images/uploads/my-rare-collectors-item!-[̲̅$̲̅(̲̅-͡°-͜ʖ-͡°̲̅)̲̅$̲̅]-1572603645543.jpg | 2023-10-29 08:53:23.146 | 2023-10-29 08:53:23.146
+     21 |  4 | Welcome to the Bee Haven (/#/bee-haven)🐝 | assets/public/images/uploads/BeeHaven.png                                            | 2023-10-29 08:53:23.146 | 2023-10-29 08:53:23.146
+     18 |  5 | I love going hiking here...               | assets/public/images/uploads/favorite-hiking-place.png                               | 2023-10-29 08:53:23.176 | 2023-10-29 08:53:23.176
+(5 rows)
+

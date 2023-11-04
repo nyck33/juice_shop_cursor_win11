@@ -1,0 +1,9 @@
+ UserId | id |                                                                                       comment                                                                                        | rating |        createdAt        |        updatedAt        
+--------+----+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------------------------+-------------------------
+      1 |  1 | I love this shop! Best products in town! Highly recommended! (***in@juice-sh.op)                                                                                                     |      5 | 2023-10-29 08:53:21.154 | 2023-10-29 08:53:21.154
+      2 |  2 | Great shop! Awesome service! (***@juice-sh.op)                                                                                                                                       |      4 | 2023-10-29 08:53:21.161 | 2023-10-29 08:53:21.161
+      3 |  3 | Nothing useful available here! (***der@juice-sh.op)                                                                                                                                  |      1 | 2023-10-29 08:53:21.168 | 2023-10-29 08:53:21.168
+     21 |  4 | Please send me the juicy chatbot NFT in my wallet at /juicy-nft : "purpose betray marriage blame crunch monitor spin slide donate sport lift clutch" (***ereum@juice-sh.op)          |      1 | 2023-10-29 08:53:21.275 | 2023-10-29 08:53:21.275
+        |  5 | Incompetent customer support! Can't even upload photo of broken purchase!<br /><em>Support Team: Sorry, only order confirmation PDFs can be attached to complaints!</em> (anonymous) |      2 | 2023-10-29 08:53:22.582 | 2023-10-29 08:53:22.582
+(5 rows)
+

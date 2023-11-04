@@ -1,0 +1,24 @@
+               List of relations
+ Schema |       Name        | Type  |  Owner   
+--------+-------------------+-------+----------
+ public | Addresses         | table | postgres
+ public | BasketItems       | table | postgres
+ public | Baskets           | table | postgres
+ public | Captchas          | table | postgres
+ public | Cards             | table | postgres
+ public | Challenges        | table | postgres
+ public | Complaints        | table | postgres
+ public | Deliveries        | table | postgres
+ public | Feedbacks         | table | postgres
+ public | ImageCaptchas     | table | postgres
+ public | Memories          | table | postgres
+ public | PrivacyRequests   | table | postgres
+ public | Products          | table | postgres
+ public | Quantities        | table | postgres
+ public | Recycles          | table | postgres
+ public | SecurityAnswers   | table | postgres
+ public | SecurityQuestions | table | postgres
+ public | Users             | table | postgres
+ public | Wallets           | table | postgres
+(19 rows)
+

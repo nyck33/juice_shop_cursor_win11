@@ -1,0 +1,9 @@
+ UserId | id |     fullName     | mobileNum  | zipCode |  streetAddress   |   city   |       state        |           country            |        createdAt        |        updatedAt        
+--------+----+------------------+------------+---------+------------------+----------+--------------------+------------------------------+-------------------------+-------------------------
+      4 |  1 | Bjoern Kimminich | 4917000001 | 25436   | Am Lokalhorst 42 | Uetersen | Schleswig-Holstein | Germany                      | 2023-10-29 08:53:21.022 | 2023-10-29 08:53:21.022
+     17 |  2 | Tim Tester       | 4917000000 | 12345   | Dummystreet 42   | Mocktown | Testilvania        | United Fakedom               | 2023-10-29 08:53:21.261 | 2023-10-29 08:53:21.261
+      1 |  3 | Administrator    | 1234567890 | 4711    | 0815 Test Street | Test     | Test               | Test                         | 2023-10-29 08:53:21.282 | 2023-10-29 08:53:21.282
+      2 |  4 | Jim              |  523423432 | 1701    | Room 3F 121      | Deck 5   | USS Enterprise     | Space                        | 2023-10-29 08:53:21.289 | 2023-10-29 08:53:21.289
+      2 |  5 | Sam              | 1000000783 | GSK783  | Deneva Colony    | Deneva   | Beta Darius System | United Federation of Planets | 2023-10-29 08:53:21.289 | 2023-10-29 08:53:21.289
+(5 rows)
+

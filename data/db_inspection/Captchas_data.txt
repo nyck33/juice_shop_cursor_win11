@@ -1,0 +1,4 @@
+ id | captchaId | captcha | answer | createdAt | updatedAt 
+----+-----------+---------+--------+-----------+-----------
+(0 rows)
+

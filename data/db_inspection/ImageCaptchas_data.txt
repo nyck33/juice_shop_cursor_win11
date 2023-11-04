@@ -1,0 +1,4 @@
+ id | image | answer | UserId | createdAt | updatedAt 
+----+-------+--------+--------+-----------+-----------
+(0 rows)
+
