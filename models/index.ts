@@ -29,7 +29,7 @@ config()
 
 import {Sequelize} from 'sequelize'
 
-const sequelize = new Sequelize(process.env.DB_NAME || 'database', process.env.DB_USER || 'myuser', process.env.DB_PASS || 'mypassword', {
+const sequelize = new Sequelize(process.env.DB_NAME || 'juiceshop_db', process.env.DB_USER || 'postgres', process.env.DB_PASS || 'password123!', {
   host: process.env.DB_HOST || 'localhost',
   dialect: 'postgres',
   pool: {
@@ -39,6 +39,7 @@ const sequelize = new Sequelize(process.env.DB_NAME || 'database', process.env.D
     idle: 10000
   }
 });
+
 
 const connectWithRetry = async () => {
   return new Promise(resolve => {
